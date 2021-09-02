@@ -1,0 +1,57 @@
+html, body {
+    min-width: 300px;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+#btns-container {
+    margin-top: 0.75rem;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    border: 2px solid rgb(11, 61, 145);
+    border-radius: 5px;
+    background-color: white;
+}
+
+button:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+button:active {
+    background-color: rgb(170, 170, 170);
+}
+
+#apod-container {
+    margin: 0;
+    padding: 0;
+}
+
+#apod-title {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+}
+
+#apod-image, #apod-video, #epic-image {
+    max-width: 780px;
+    max-height: 480px;
+}
+
+.hidden {
+    display: none;
+}
+
+#apod-copyright, #epic-date {
+    margin-bottom: 5px;
+    position: relative;
+    float: right;
+}
+
+#epic-image {
+    margin-top: 0.5rem;
+    display: block;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="btns-container">
+        <button id="btn-apod">APOD</button>
+        <button id="btn-epic">EPIC</button>
+    </div>
+
+    <div id="apod-container">
+        <h1 id="apod-title">Fetching...</h1>
+        <div>
+            <img src="" alt="APOD" id="apod-image" class="hidden">
+            <video src="" id="apod-video" class="hidden" controls autoplay></video>
+        </div>
+
+        <small id="apod-copyright"></small>
+    </div>
+
+    <div id="epic-container" class="hidden">
+        <img src="" alt="Fetching..." id="epic-image">
+        <small id="epic-date"></small>
+    </div>
+
+    <script type="text/javascript" src="popup.js"></script>
+</body>
+</html>
