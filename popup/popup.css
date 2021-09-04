@@ -5,7 +5,7 @@ html, body {
     background-color: white;
 }
 
-#btns-container {
+.btns-container {
     margin-top: 0.75rem;
     margin-bottom: auto;
     display: flex;
@@ -26,10 +26,10 @@ button:active {
     background-color: rgb(170, 170, 170);
 }
 
-#apod-container {
+/* #apod-container {
     margin: 0;
     padding: 0;
-}
+} */
 
 #apod-title {
     font-size: 1.5rem;
@@ -39,6 +39,19 @@ button:active {
 #apod-image, #apod-video, #epic-image {
     max-width: 780px;
     max-height: 480px;
+}
+
+#epic-image {
+    margin-top: 0.5rem;
+    display: block;
+}
+
+#mars-image {
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 780px;
+    max-height: 440px;
+    margin-top: 0.75rem;
 }
 
 .hidden {
@@ -51,7 +64,11 @@ button:active {
     float: right;
 }
 
-#epic-image {
-    margin-top: 0.5rem;
-    display: block;
+#mars-small-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#mars-rover {
+    text-transform: capitalize;
 }

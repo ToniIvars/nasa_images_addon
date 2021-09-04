@@ -37,9 +37,47 @@ import('./api_key.js').then(obj => {
         })
     }
 
+    const adjust_mars_date = date => `${date[2]}/${date[1]}/${date[0]}`
+
+    function get_mars_data() {
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=${API_KEY}`)
+        .then(resp => resp.json()).then(data => {
+            let images = data['latest_photos']
+            let keys = Object.keys(images)
+
+            let arr = []
+            for (const key of keys) {
+                let image = images[key]
+                arr.push({url: image.img_src, camera_name: image.camera.name, camera_full_name: image.camera.full_name, date: adjust_mars_date(image.earth_date.split('-'))})                
+            }
+            
+            browser.storage.local.set({
+                mars_perseverance: arr
+            })
+        })
+
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=${API_KEY}`)
+        .then(resp => resp.json()).then(data => {
+            let images = data['latest_photos']
+            let keys = Object.keys(images)
+
+            let arr = []
+            for (const key of keys) {
+                let image = images[key]
+                arr.push({url: image.img_src, camera_name: image.camera.name, camera_full_name: image.camera.full_name, date: adjust_mars_date(image.earth_date.split('-'))})                
+            }
+            
+            browser.storage.local.set({
+                mars_curiosity: arr
+            })
+        })
+    }
+
     function fetcher() {
         get_apod_data()
         get_epic_data()
+        get_mars_data()
+        console.info('Information fetched')
     }
 
     fetcher()

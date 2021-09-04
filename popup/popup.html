@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div id="btns-container">
+    <div class="btns-container">
         <button id="btn-apod">APOD</button>
         <button id="btn-epic">EPIC</button>
+        <button id="btn-mars">Mars</button>
     </div>
 
     <div id="apod-container">
@@ -23,6 +24,21 @@
     <div id="epic-container" class="hidden">
         <img src="" alt="Fetching..." id="epic-image">
         <small id="epic-date"></small>
+    </div>
+
+    <div id="mars-container" class="hidden">
+        <hr>
+        <div class="btns-container">
+            <button id="btn-perseverance">Perseverance Rover</button>
+            <button id="btn-curiosity">Curiosity Rover</button>
+        </div>
+
+        <img src="" alt="Fetching..." id="mars-image">
+        <div id="mars-small-container">
+            <small><abbr id="mars-camera" title=""></abbr></small>
+            <small id="mars-rover"></small>
+            <small id="mars-date"></small>  
+        </div>
     </div>
 
     <script type="text/javascript" src="popup.js"></script>
