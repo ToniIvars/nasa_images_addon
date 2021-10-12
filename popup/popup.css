@@ -26,11 +26,6 @@ button:active {
     background-color: rgb(170, 170, 170);
 }
 
-/* #apod-container {
-    margin: 0;
-    padding: 0;
-} */
-
 #apod-title {
     font-size: 1.5rem;
     margin: 0.5rem auto;

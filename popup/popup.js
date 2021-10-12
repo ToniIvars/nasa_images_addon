@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const apod_title = document.getElementById('apod-title')
     const apod_image = document.getElementById('apod-image')
     const apod_video = document.getElementById('apod-video')
+    const apod_yt_video = document.getElementById('apod-yt-video')
     const apod_copyright = document.getElementById('apod-copyright')
 
     const epic_container = document.getElementById('epic-container')
@@ -26,6 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (apod_data.media_type === 'image') {
                 apod_image.setAttribute('src', apod_data.url)
                 apod_image.classList.remove('hidden')
+
+            } else if (apod_data.url.includes('youtube.com')) {
+                apod_yt_video.setAttribute('src', apod_data.url)
+                apod_yt_video.classList.remove('hidden')
+                
             } else {
                 apod_video.setAttribute('src', apod_data.url)
                 apod_video.classList.remove('hidden')
